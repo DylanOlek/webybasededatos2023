@@ -18,7 +18,6 @@
     </style>
 </head>
 <body>
-    <?php include 'conexion.php';?>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">CETiS 107</a>
@@ -64,6 +63,9 @@
             </div>
         </div>
     </div>
-
+        <footer class="text-center">
+            <span>Cetis 107 web App &copy;2023</span>
+        </footer>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>

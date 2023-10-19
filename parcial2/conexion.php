@@ -1,8 +1,8 @@
 <?php
     $server="localhost";
     $user="root";
-    $password=""; 
-
+    $password="root "; 
+    $baseDatos="cetis107";
     //conexion
     $conexion = new mysqli($server, $user, $password);
 

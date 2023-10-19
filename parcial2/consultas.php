@@ -27,7 +27,21 @@
                             </tr>
                         </thead>   
                         <tbody>
-
+                            <?php while($registro = $datos->fetch_assoc()){ ?>
+                                <tr>
+                                    <td><?php $registro["id"];?></td>
+                                    <td><?php $registro["nombre"];?></td>
+                                    <td><?php $registro["numero_control"];?></td>
+                                    <td><?php $registro["semestre"];?></td>
+                                    <td><?php $registro["edad"];?></td>
+                                    <td><?php $registro["turno"];?></td>
+                                    <td><?php $registro["sexo"];?></td>
+                                    <td>
+                                        <a href="" class="btn btn-xs btn-primary">Editar</a>
+                                        <a href="" class="btn btn-xs btn-danger">Eliminar</a>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody> 
                     </table>
                     
