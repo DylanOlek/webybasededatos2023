@@ -37,6 +37,13 @@ CREATE TABLE `alumnos` (
   `sexo` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE `materias` (
+  `id` bigint(20) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `semestre` int(11) NOT NULL,
+  `especialidad` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Volcado de datos para la tabla `alumnos`
 --
@@ -47,6 +54,11 @@ INSERT INTO `alumnos` (`id`, `nombre`, `numero_control`, `semestre`, `edad`, `tu
 (3, 'Dylan Olek Arce Monobe', '21325061070483', 5, 16, 'Vespertino', 1),
 (4, 'Julio Esteban Beltran Cardenas', '21325061070428', 5, 16, 'Vespertino', 1),
 (5, 'Erik David Rodriguez Mesa', '21325061070582', 5, 17, 'Vespertino', 1);
+
+INSERT INTO `materias` (`id`, `nombre`, `semestre`, `especialidad`) VALUES
+(1, 'Jair Emmanuel Moreno Blanco', 5, 'Programacion'),
+(2, 'Itzel Amairany Serrano Gonzalez', 5, 'Programacion',),
+(3, 'Dylan Olek Arce Monobe', 5, 'Programacion',),
 
 --
 -- Índices para tablas volcadas
