@@ -41,7 +41,7 @@ CREATE TABLE `materias` (
   `id` bigint(20) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `semestre` int(11) NOT NULL,
-  `especialidad` tinyint(4) NOT NULL
+  `especialidad` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -57,8 +57,8 @@ INSERT INTO `alumnos` (`id`, `nombre`, `numero_control`, `semestre`, `edad`, `tu
 
 INSERT INTO `materias` (`id`, `nombre`, `semestre`, `especialidad`) VALUES
 (1, 'Jair Emmanuel Moreno Blanco', 5, 'Programacion'),
-(2, 'Itzel Amairany Serrano Gonzalez', 5, 'Programacion',),
-(3, 'Dylan Olek Arce Monobe', 5, 'Programacion',),
+(2, 'Itzel Amairany Serrano Gonzalez', 5, 'Programacion'),
+(3, 'Dylan Olek Arce Monobe', 5, 'Programacion');
 
 --
 -- Índices para tablas volcadas
@@ -68,6 +68,9 @@ INSERT INTO `materias` (`id`, `nombre`, `semestre`, `especialidad`) VALUES
 -- Indices de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
+  ADD PRIMARY KEY (`id`);
+
+  ALTER TABLE `materias`
   ADD PRIMARY KEY (`id`);
 
 --

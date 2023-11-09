@@ -15,14 +15,15 @@
             <div class="col-12 card p-4">
                 <form action="">
                     <div class="form-group">
-                        <label for="nombre">Nombre:</label>
+                        <label for="nombre">Materia</label>
                         <input type="text" class="form-control" name="nombre" placeholder="Teclea la materia">
                     </div>
                     <div class="class-group">
-                        <label for="semestre"></label>
+                        <label for="semestre">Semestre</label>
                         <input type="number" class="form-control" name="semestre" placeholder="Teclea el semestre">
-                    </div>
+                    </div><br>
                     <div class="form-group">
+                    <label for="especialidad">Especialidad</label>
                         <select name="especialidad" class="form-control">
                             <option value="">Selecciona una especialidad</option>
                             <option value="PROGRAMACION">Programacion</option>
@@ -31,10 +32,10 @@
                             <option value="CONSTRUCCION">Construccion</option>
                             <option value="OFIMATICA">Ofimatica</option>
                         </select>
-                    </div>
+                    </div><br>
                     <div>
                         <input type="submit" class="btn btn-primary" value="Registrar">
-                        <a href="ConsultarMaterias.php" class="btn btn-danger"></a>
+                        <a href="ConsultarMaterias.php" class="btn btn-danger">Cancelar</a>
                     </div>
                 </form>
             </div>
