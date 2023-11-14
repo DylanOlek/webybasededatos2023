@@ -44,6 +44,12 @@ CREATE TABLE `materias` (
   `especialidad` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE `alumnos_materias` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `alumno_id` bigint(11) NOT NULL,
+  `materia_id` bigint(11) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Volcado de datos para la tabla `alumnos`
 --
@@ -56,6 +62,12 @@ INSERT INTO `alumnos` (`id`, `nombre`, `numero_control`, `semestre`, `edad`, `tu
 (5, 'Erik David Rodriguez Mesa', '21325061070582', 5, 17, 'Vespertino', 1);
 
 INSERT INTO `materias` (`id`, `nombre`, `semestre`, `especialidad`) VALUES
+(1, 'FISICA II', 5, 'Programacion'),
+(2, 'INGLES II', 5, 'Programacion'),
+(3, 'CALCULO DIFERENCIAL', 5, 'Programacion');
+(4, 'ECOLOGIA I', 5, 'Programacion');
+
+INSERT INTO `almuno_materias` (`id`, `nombre`, `semestre`, `especialidad`) VALUES
 (1, 'Jair Emmanuel Moreno Blanco', 5, 'Programacion'),
 (2, 'Itzel Amairany Serrano Gonzalez', 5, 'Programacion'),
 (3, 'Dylan Olek Arce Monobe', 5, 'Programacion');
