@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Alumno</title>
+    <title>Editar Materias</title>
     <link rel="stylesheet" href="css/bootstrap.css"> 
     <script src="code.jquery.com_jquery-3.7.1.js"></script>
 </head>
@@ -15,52 +15,36 @@
 
         $id = $_GET["id"];
 
-        $sql = "SELECT * FROM materia WHERE id=".$id;
+        $sql = "SELECT * FROM materias WHERE id=".$id;
 
         $datos = $conexion->query($sql);
         
-        $materia = $datos->fetch_assoc();
+        $materias = $datos->fetch_assoc();
 
     ?>
     <div class="container">
         <div class="row">
             <div class="col-12 card m-4 p-4">
                 <h2>Registrar Materia</h2><hr>
-                <form action="ActualizarMateria.php" method="POST">
-                    <input type="hidden" name="id" value="<?php echo $materia["id"]; ?>">
+                <form action="ActualizarMaterias.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $materias["id"]; ?>">
                     <div class="form-group">
                         <label for="">Nombre:</label>
-                        <input value="<?php echo $materia["nombre"]; ?>" name="nombre" type="text" class="form-control" placeholder="Teclea el nombre de la materia" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Número de control:</label>
-                        <input value="<?php echo $materia["numero_control"]; ?>" name="nc" type="text" class="form-control" placeholder="Teclea el número de control" required>
+                        <input value="<?php echo $materias["nombre"]; ?>" name="nombre" type="text" class="form-control" placeholder="Teclea el nombre de la materia" required>
                     </div>
                     <div class="form-group">
                         <label for="">Semestre:</label>
-                        <input value="<?php echo $materia["semestre"]; ?>" name="semestre" type="number" class="form-control" placeholder="Teclea el semestre" required>
+                        <input value="<?php echo $materias["semestre"]; ?>" name="semestre" type="number" class="form-control" placeholder="Teclea el semestre" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Edad:</label>
-                        <input value="<?php echo $materia["edad"]; ?>" name="edad" type="number" class="form-control" placeholder="Teclea la edad" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Turno:</label>
-                        <select name="turno" class="form-control" required>
-                            <option selected value="<?php echo $materia["turno"]; ?>"><?php echo $materia["turno"]; ?></option>
-                            <option value="">Selecciona el turno</option>
-                            <option value="MATUTINO">MATUTINO</option>
-                            <option value="VESPERTINO">VESPERTINO</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Sexo:</label>
-                        <select name="sexo" class="form-control" required>
-                            <option value="">Selecciona el sexo</option>
-                            <option selected value="<?php echo $alumno["sexo"]; ?>"><?php echo $alumno["sexo"]; ?></option>
-                            <option value="0">FEMENINO</option>
-                            <option value="1">MASCULINO</option>
-                            <option value="2">Prefiero no responder</option>
+                        <label for="">Especialidad:</label>
+                        <select name="especialidad" class="form-control" required>
+                            <option value="">Selecciona la especialidad</option>
+                            <option value="PROGRAMACION">Programación</option>
+                            <option value="CONTABILIDAD">Contabilidad</option>
+                            <option value="OFIMATICA">Ofimática</option>
+                            <option value="CONSTRUCCION">Construcción</option>
+                            <option value="ELECTRONICA">Electronica</option>
                         </select>
                     </div><br>
                     <div>
