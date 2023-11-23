@@ -37,7 +37,7 @@
                     <h3>Seleccione las materias:</h3>
                     <?php if($datos_materias->num_rows > 0) { 
                         while($registro =$datos_materias->fetch_assoc()){ ?>
-                        <p><input type="checkbox" name="materias[]" value=""><?php echo $registro["nombre"]; ?></p>
+                        <p><input type="checkbox" name="materias[]" value="<?php echo $registro["id"]; ?>"><?php echo $registro["nombre"]; ?></p>
                     
                 <?php } } ?>
                 <div>
